@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Express</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 3px;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 10px; /* prevent cut-off */
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a.active {
+  text-decoration: underline;
+}
+nav a:hover {
+  color: #ffcc00; /* highlight hover */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55); /* darker overlay for readability */
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.btn {
+  padding: 12px 30px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Subpages */
+.page {
+  padding: 120px 50px;
+}
+.page h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.page ul {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Print Express</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="staffs.html">Staffs</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to PrintExpress shop</h1>
+      <p>Your one-stop printing solution for flyers, tarpaulin, invitations, ID, Laminations and more. 
+      High quality prints, fast service, and friendly staff.</p>
+      <a href="services.html" class="btn">See Our Services</a>
+    </div>
+  </section>
+</body>
+</html>
